@@ -23,7 +23,7 @@ const calculatesFarePrice = (start, finish) => {
     if (travel <= 400){
         return 0;
     }else if (travel <= 2000){
-        return (0.02 * travel).toFixed(2);
+        return (0.02 * (travel - 400).toFixed(2));
     }else if(travel <= 2500){
         return 25;
     }
@@ -31,5 +31,6 @@ const calculatesFarePrice = (start, finish) => {
         return "cannot travel that far";
     }
 }
+console.log(calculatesFarePrice(10, 8));
 
 
